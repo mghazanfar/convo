@@ -42,7 +42,7 @@ export const Container = () => {
   };
 
   return (
-    <Box p={8}>
+    <Box p={8} test-id="app-container">
       <Box display={"flex"} justifyContent={"center"} mb={2}>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYseGHD4jSdmHO83qQORRds3bOQSPY2m75ZL1Qrxk0uA&s"

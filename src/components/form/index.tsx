@@ -50,6 +50,7 @@ export const Form = ({ onSubmit, editValue, handleEdit }: IForm) => {
       boxShadow={6}
       component={"form"}
       onSubmit={handleSubmit}
+      data-testid="form"
     >
       <Typography>Add record</Typography>
       <TextField
@@ -58,6 +59,7 @@ export const Form = ({ onSubmit, editValue, handleEdit }: IForm) => {
         placeholder="Enter title..."
         value={values.title}
         onChange={(e) => setValues({ ...values, title: e.target.value })}
+        name="title"
       />
       <TextField
         fullWidth
@@ -69,6 +71,7 @@ export const Form = ({ onSubmit, editValue, handleEdit }: IForm) => {
           console.log(e.target);
           setValues({ ...values, upvotesCount: e.target.value });
         }}
+        name="upvotes-count"
       />
       <TextField
         fullWidth
@@ -77,6 +80,7 @@ export const Form = ({ onSubmit, editValue, handleEdit }: IForm) => {
         type="date"
         value={values.date}
         onChange={(e) => setValues({ ...values, date: e.target.value })}
+        name="date"
       />
       <Box mt={2}>
         <Button
@@ -85,6 +89,8 @@ export const Form = ({ onSubmit, editValue, handleEdit }: IForm) => {
           size="large"
           disabled={!formCanSubmit}
           type="submit"
+          test-id="submit-form"
+          name="submit"
         >
           {editValue.title ? "Save Edits " : "Add Data"}
         </Button>

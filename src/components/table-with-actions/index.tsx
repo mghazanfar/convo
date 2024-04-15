@@ -63,6 +63,7 @@ export const TableWithActions = ({
         onChange={handleSearch}
         value={searchValue}
         disabled={data.length < 2}
+        data-testid="search-input"
       />
       <Box display={"flex"} alignItems={"center"} my={3}>
         <Box mr={2}>

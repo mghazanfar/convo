@@ -40,6 +40,7 @@ export default function RecordsTable({
               <TableRow
                 key={title + index}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                data-testid={title + index}
               >
                 <TableCell align="left" component="th" scope="row">
                   {title}
@@ -71,7 +72,7 @@ export default function RecordsTable({
           sx={{ minHeight: 200 }}
           alignItems={"center"}
         >
-          <CircularProgress title="Searching..." />
+          <CircularProgress data-testid="loading" title="Searching..." />
         </Box>
       )}
     </TableContainer>
